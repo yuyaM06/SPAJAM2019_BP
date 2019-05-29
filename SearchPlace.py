@@ -44,9 +44,8 @@ def search_place(nowlat, nowlng, genre, dis):
             genre_name = genrespot[random.randrange(len(genrespot))]
         print(genre_name)
 
-        MapAPI = 'AIzaSyCOoFPnodxekD07cJpKh8tz0GNoU9_tyGU'
+        MapAPI = '<API KEY>'
         url_reseach_place = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=' + str(nowlat)+','+str(nowlng) +'&radius=' + str(radius) + '&type='+str(genre_name)+'&language=ja&key=' + MapAPI
-        # url_reseach_place = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=' + str(nowlat)+','+str(nowlng) +'&radius=' + str(radius) + '&type=food&language=ja&key=' + MapAPI
 
         #types=foodなど、配列などで指定する必要あり
         res_json = requests.get(url_reseach_place)
@@ -89,7 +88,7 @@ def search_place(nowlat, nowlng, genre, dis):
 def get_place_info(place_id):
     api = "https://maps.googleapis.com/maps/api/place/details/json?&language=ja&placeid={place}&key={key}"
 
-    MapAPI = 'AIzaSyCOoFPnodxekD07cJpKh8tz0GNoU9_tyGU'
+    MapAPI = '<API KEY>'
 
     url_get_place_info = api.format(place = place_id, key = MapAPI)
 
