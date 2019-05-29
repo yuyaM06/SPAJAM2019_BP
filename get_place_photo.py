@@ -3,7 +3,7 @@ import base64
 def get_place_photo(photo_refer):
     api = "https://maps.googleapis.com/maps/api/place/photo?maxwidth={width}&photoreference={photo_refer}&key={key}"
 
-    MapAPI = 'AIzaSyCOoFPnodxekD07cJpKh8tz0GNoU9_tyGU'
+    MapAPI = '<API KEY>'
 
     img_file = api.format(width = 400, photo_refer = photo_refer, key = MapAPI)
 
